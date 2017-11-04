@@ -1,0 +1,15 @@
+CascadeMaximizationInICM.py
+
+Above python code takes graph edges as input. Amzaon.txt is provided as input.
+k value should be provided accordingly.For the provided input k value is 10.
+
+create_weights() - This function calculates the probability of each edge(i,j) based on the out degree of the node i. Since the probability is distributed euqally among the neighbors of the node, probability is stored in a dictionary 'newG' with node as a key value.This means that if a node satifies the condition pij>rand_no then it activates all its neighbors satisfying the same condition.
+Also, this function creates the list of nodes 'V' satifying the the condition pij>rand_no.
+
+
+get_activatted_node_list() - This function creates the dictionary 'Activated_Nodes', which contains total number of nodes activated by particular node i on activation.Key is node number and value is the number of nodes activated when key is ativated.
+All the activated nodes will be consider from the list 'V'.
+
+get_nodes_activated_list() - This function computes the total number of activated neighbors and their neighbors for particular node i.The activation is computed recurssively.
+
+get_S() - This function computes the k nodes that would maximizes the cascading.
